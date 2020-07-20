@@ -1,0 +1,11 @@
+FROM ubuntu:latest
+RUN apt update -y
+RUN apt install -y python3 python3-pip
+WORKDIR /app
+ENV DEBUG=True
+EXPOSE 80 
+VOLUME /data 
+COPY . /app 
+RUN pip3 install -r requirements.txt 
+ENTRYPOINT ["python"]
+CMD ["app.py"]
