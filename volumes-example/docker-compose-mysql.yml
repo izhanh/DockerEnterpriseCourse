@@ -1,0 +1,15 @@
+version: "3"
+services:
+  mysql:
+    image: mysql
+    volumes:
+    	- data:/var/lib/mysql
+    	- logs:/var/log/mysql
+    	- /etc:/etc
+  analyzer:
+    image: log-analyzer
+    volumes:
+      - logs:/var/log:ro
+  volumes:
+    data:
+    logs:
