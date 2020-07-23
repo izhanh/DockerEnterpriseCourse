@@ -1,6 +1,6 @@
+import socket
 from flask import Flask
 from redis import Redis, RedisError
-import socket
 
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def hello():
     except RedisError:
         visits = "<i>counter disabled. Cannot connect to Redis.</i>"
 
-    html = "<h3>Hola a todos!</h3>" \
+    html = "<h3>Hola!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}<br/>" \
            "<br/>"
