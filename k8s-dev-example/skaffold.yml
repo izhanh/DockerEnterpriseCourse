@@ -13,4 +13,4 @@ build:
 deploy:
   kubectl:
     manifests:
-      - manifests/vote-deployment.yaml
+      - manifests/vote.yaml
