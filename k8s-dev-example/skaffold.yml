@@ -1,0 +1,16 @@
+apiVersion: skaffold/v1alpha5
+kind: Config
+build:
+  artifacts:
+    - image: izhanh/vote
+      context: vote
+      docker:
+        dockerfile: Dockerfile
+  tagPolicy:
+    sha256: {}
+  local:
+    push: true
+deploy:
+  kubectl:
+    manifests:
+      - manifests/vote-deployment.yaml
