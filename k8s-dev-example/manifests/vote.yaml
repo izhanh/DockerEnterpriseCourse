@@ -17,6 +17,7 @@ spec:
       containers:
         - image: izhanh/vote
           name: vote
+          #imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
