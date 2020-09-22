@@ -1,5 +1,6 @@
 FROM bash:latest
 
+RUN apk --no-cache add curl
 WORKDIR /ci
 
 ADD test.sh /ci/test.sh
