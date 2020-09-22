@@ -14,7 +14,7 @@ def hello():
     except RedisError:
         visits = "<i>counter disabled. Cannot connect to Redis.</i>"
 
-    html = "<h3>Hola a algunos!</h3>" \
+    html = "<h3>Hola Ibon e Iñaki!</h3>" \
            "<b>Hostname:</b> {hostname}<br/>" \
            "<b>Visits:</b> {visits}<br/>" \
            "<br/>"
