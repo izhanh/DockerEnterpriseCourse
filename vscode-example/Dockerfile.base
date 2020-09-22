@@ -1,0 +1,4 @@
+FROM izhanh/example:base_image
+COPY ./app /app 
+ENTRYPOINT ["python3"]
+CMD ["app.py"]
