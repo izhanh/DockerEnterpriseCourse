@@ -34,5 +34,5 @@ spec:
           args:
             [
               "-c",
-              "echo Hola a todos! > /pod-data/index.html && tail -f /dev/null",
+              "echo Hola! > /pod-data/index.html && tail -f /dev/null",
             ]

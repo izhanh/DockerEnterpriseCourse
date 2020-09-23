@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-        - image: izhanh/vote
+        - image: izhanh/vote:horses
           name: vote
           #imagePullPolicy: Never
 ---
