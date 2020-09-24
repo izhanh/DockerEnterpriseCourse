@@ -5,6 +5,16 @@ services:
     depends_on:
       - redis
     ports:
-      - 5000:5000
+      - 80:5000
   redis:
     image: redis
+  ngrok:
+    image: wernight/ngrok
+    depends_on:
+      - web
+    ports:
+      - 4040:4040
+    environment:
+      NGROK_LOOK_DOMAIN: web
+      NGROK_PORT: 5000
+      NGROK_AUTH: 1ett73ZgtDAUYAUyOlRtdk6D6Qd_QBtznxNhaM55EwRoffx8
