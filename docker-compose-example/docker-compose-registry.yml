@@ -1,0 +1,16 @@
+version: "3"
+services:
+  registry:
+    image: registry:2
+    ports:
+      - 5000:5000
+  ngrok:
+    image: wernight/ngrok
+    depends_on:
+      - registry
+    ports:
+      - 4040:4040
+    environment:
+      NGROK_LOOK_DOMAIN: registry
+      NGROK_PORT: 5000
+      NGROK_AUTH: 1ett73ZgtDAUYAUyOlRtdk6D6Qd_QBtznxNhaM55EwRoffx8
