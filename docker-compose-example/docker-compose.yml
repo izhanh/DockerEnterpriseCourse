@@ -4,6 +4,12 @@ services:
     build: .
     depends_on:
       - redis
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000"]
+      interval: 10s
+      timeout: 10s
+      retries: 2
+      start_period: 20s
     ports:
       - 80:5000
   redis:
